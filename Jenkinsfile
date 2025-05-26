@@ -20,7 +20,7 @@ pipeline {
                                     sourceFiles: 'script.sh',
                                     removePrefix: '',
                                     remoteDirectory: '/home/sergey/jenkins-deploy',
-                                    execCommand: 'ls -la && chmod +x script.sh && ./script.sh'
+                                    execCommand: 'cd /home/sergey/jenkins-deploy && ls -la && chmod +x script.sh && ./script.sh'
                                 )
                             ],
                             usePromotionTimestamp: false,
