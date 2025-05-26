@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Клонирование репозитория') {
             steps {
-                git 'https://github.com/M4mB14/Jenkins_test'
+                git branch: 'main', git 'https://github.com/M4mB14/Jenkins_test'
             }
         }
 
