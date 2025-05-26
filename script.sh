@@ -1,1 +1,1 @@
-echo "Hello from GitHub!" > ~/jenkins_success.txt
+echo "Hello from GitHub!" > jenkins_success
