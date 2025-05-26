@@ -19,8 +19,8 @@ pipeline {
                                 sshTransfer(
                                     sourceFiles: 'script.sh',
                                     removePrefix: '',
-                                    remoteDirectory: '/home/sergey/jenkins-deploy',
-                                    execCommand: 'pwd && ls -la && cd ./home/sergey/jenkins-deploy && pwd && chmod +x script.sh && ./script.sh'
+                                    remoteDirectory: '.',
+                                    execCommand: 'pwd && ls -la && chmod +x script.sh && ./script.sh'
                                 )
                             ],
                             usePromotionTimestamp: false,
