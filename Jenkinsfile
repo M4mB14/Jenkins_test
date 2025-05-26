@@ -19,7 +19,7 @@ pipeline {
                                 sshTransfer(
                                     sourceFiles: 'script.sh',
                                     removePrefix: '',
-                                    remoteDirectory: '/home/ubuntu/jenkins-deploy',
+                                    remoteDirectory: '/home/sergey/jenkins-deploy',
                                     execCommand: 'chmod +x script.sh && ./script.sh'
                                 )
                             ],
