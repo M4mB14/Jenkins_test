@@ -17,10 +17,11 @@ pipeline {
                             configName: 'Jenkins-agent-1', // Имя SSH-конфига
                             transfers: [
                                 sshTransfer(
-                                    sourceFiles: 'script.sh',
-                                    removePrefix: '',
-                                    remoteDirectory: '/home/sergey/jenkins-deploy',
-                                    execCommand: 'ls -la && chmod +x script.sh && ./script.sh'
+                                    rm -rf jenkins-deploy &&
+                                    git clone https://github.com/M4mB14/Jenkins_test jenkins-deploy &&
+                                    cd jenkins-deploy &&
+                                    chmod +x script.sh &&
+                                    ./script.sh
                                 )
                             ],
                             usePromotionTimestamp: false,
