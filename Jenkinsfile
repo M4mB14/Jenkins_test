@@ -20,6 +20,7 @@ pipeline {
                                     sourceFiles: 'script.sh',
                                     removePrefix: '',
                                     remoteDirectory: '/home/sergey/jenkins-deploy',
+                                    execCommand: 'ls -la',
                                     execCommand: 'chmod +x script.sh && ./script.sh'
                                 )
                             ],
