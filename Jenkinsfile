@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Клонирование репозитория') {
             steps {
-                git 'https://github.com/M4mB14/Jenkins_test'
+                // Явно указываем ветку main
+                git branch: 'main', url: 'https://github.com/M4mB14/Jenkins_test'
             }
         }
 
@@ -13,7 +14,7 @@ pipeline {
                 sshPublisher(
                     publishers: [
                         sshPublisherDesc(
-                            configName: 'Jenkins-agent-1', // Имя SSH-конфига, как ты настраивал ранее
+                            configName: 'Jenkins-agent-1', // Имя SSH-конфига
                             transfers: [
                                 sshTransfer(
                                     sourceFiles: 'script.sh',
